@@ -43,10 +43,22 @@ h3 {
 button {
   color: white;
   font-weight: 200;
-  background: #099b66;
+  background: #099bFF;
   height: 50px;
-  width: 100px;
+  width: 70px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  border: none;
+  border-radius: 10%;
+}
+
+button:active {
+  background: #9999FF;
+}
+
+select {
+  border: none;
+  border-radius: 10%;
+  background: #099bFF;
 }
