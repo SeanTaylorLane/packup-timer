@@ -13,6 +13,7 @@ html, body {
 
 body {
   background: black;
+=======
 }
 
 #background {
@@ -22,7 +23,27 @@ body {
 }
 /* original color: #099b66 */
 
+.dim {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+#background {
+  height: 100%;
+  width: 100%;
+  background: black;
+  transition: background 3s;
+}
+/* original color: #099b66 */
+
 #center-container {
+  height: 36.5%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 3s;
   height: 60%;
   position: relative;
   top: 50%;

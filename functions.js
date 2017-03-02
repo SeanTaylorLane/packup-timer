@@ -21,6 +21,29 @@ function getTime() {
 
 //setInterval(getTime, 1000);
 
+function change() {
+    if (i>9) {
+        direction = false;
+    }
+
+    if (i<1) {
+        direction = true;
+    }
+
+    if (direction===false) {
+        --i;
+    } else {
+        ++i;
+    }
+
+
+b.style.background = color[i];
+//p.innerHTML = color[i] + "(" + i + ")";
+}
+
+function test() {
+  document.getElementById("center-container").style.opacity = "1";
+=======
 function background() {
     if (i>=0.9) {
         direction = false;
