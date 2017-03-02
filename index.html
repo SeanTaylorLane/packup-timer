@@ -8,10 +8,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="functions.js"></script>
  </head>
- <body>
+ <body onLoad="change()">
    <div id="background">
+   <div class="dim">
    <div id="center-container">
-   <h1>When should I pack up?</h1>
+   <h1 id="test">When should I pack up?</h1>
    <div class="options-container">
      <h3>I am in <select name="period" class="dropdown">
           <option value="1">1st</option>
@@ -36,14 +37,18 @@
      <h3>Message: <input type="text" placeholder="(Optional)" class="message"></h3>
      <button>Go!</button>
    </div>
-   </div>
+ </div>
+ </div>
  </div>
 <script>
 var b = document.getElementById("background");
-var i = 0.8;
-var direction = true;
-
-setInterval(background, 1);
+var p = document.getElementById("test");
+var color = ["blueViolet", "cornflowerBlue", "aquaMarine", "greenYellow", "orange", "orangeRed", "orange", "greenYellow", "aquaMarine", "cornflowerBlue", "blueViolet"];
+var i = -1;
+var direction = 'true';
+//p.innerHTML = color[i] + "(" + i + ")";
+setInterval(change, 2000);
+setTimeout(test, 500);
 </script>
 
  </body>

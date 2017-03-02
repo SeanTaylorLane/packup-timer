@@ -15,18 +15,27 @@ body {
   background: black;
 }
 
+.dim {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
 #background {
   height: 100%;
   width: 100%;
-  padding: 2vw;
+  background: black;
+  transition: background 3s;
 }
 /* original color: #099b66 */
 
 #center-container {
-  height: 60%;
+  height: 36.5%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 3s;
 }
 
 .options-container {

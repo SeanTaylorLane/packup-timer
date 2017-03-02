@@ -21,24 +21,26 @@ function getTime() {
 
 //setInterval(getTime, 1000);
 
-function background() {
-    if (i>=0.9) {
+function change() {
+    if (i>9) {
         direction = false;
     }
 
-    if (i<=0.7) {
+    if (i<1) {
         direction = true;
     }
 
-    if (direction==false) {
-        i-=0.0005;
+    if (direction===false) {
+        --i;
     } else {
-        i+=0.0005;
+        ++i;
     }
 
 
-b.style.background = "rgba(9,155,102," + i + ")";
+b.style.background = color[i];
+//p.innerHTML = color[i] + "(" + i + ")";
+}
 
-//b.innerHTML = i;
-// rgb(9,155,102)
+function test() {
+  document.getElementById("center-container").style.opacity = "1";
 }
