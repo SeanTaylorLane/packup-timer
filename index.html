@@ -2,14 +2,10 @@
 <html>
  <head>
    <title>Packup Clock</title>
-   <link href="index.css" rel="stylesheet" type="text/css">
-   <link href="favicon.ico" rel="icon" type="image/x-icon">
    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="functions.js"></script>
  </head>
  <body onLoad="change()">
-   <div id="background">
    <div class="dim">
    <div id="background">
    <div id="center-container">
@@ -39,8 +35,6 @@
      <button>Go!</button>
    </div>
  </div>
- </div>
- </div>
 <script>
 var b = document.getElementById("background");
 var p = document.getElementById("test");
@@ -50,15 +44,8 @@ var direction = 'true';
 //p.innerHTML = color[i] + "(" + i + ")";
 setInterval(change, 2000);
 setTimeout(test, 500);
+</script>
    </div>
  </div>
-<script>
-var b = document.getElementById("background");
-var i = 0.8;
-var direction = true;
-
-setInterval(background, 1);
-</script>
-
  </body>
 </html>
