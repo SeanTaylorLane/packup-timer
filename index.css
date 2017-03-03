@@ -13,7 +13,6 @@ html, body {
 
 body {
   background: black;
-=======
 }
 
 #background {
@@ -87,7 +86,7 @@ button {
 }
 
 button:active {
-  background: #9999FF;
+  background: cyan;
 }
 
 select {
