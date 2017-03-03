@@ -43,25 +43,4 @@ b.style.background = color[i];
 
 function test() {
   document.getElementById("center-container").style.opacity = "1";
-=======
-function background() {
-    if (i>=0.9) {
-        direction = false;
-    }
-
-    if (i<=0.7) {
-        direction = true;
-    }
-
-    if (direction==false) {
-        i-=0.0005;
-    } else {
-        i+=0.0005;
-    }
-
-
-b.style.background = "rgba(9,155,102," + i + ")";
-
-//b.innerHTML = i;
-// rgb(9,155,102)
-}
+  }
