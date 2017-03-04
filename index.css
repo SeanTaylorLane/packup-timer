@@ -22,7 +22,7 @@ body {
 }
 
 #center-container {
-  height: 280px;
+  height: 330px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -125,7 +125,11 @@ select:hover {
     font-weight: 200;
     width: auto;
     height: auto;
-    padding: 7px 14px;
+    padding: 5px 14px;
+  }
+
+  #center-container {
+    height: 302px;
   }
 }
 
@@ -155,6 +159,10 @@ select:hover {
     width: auto;
     height: auto;
     padding: 5px 10px;
+  }
+
+  #center-container {
+    height: 235px;
   }
 }
 
