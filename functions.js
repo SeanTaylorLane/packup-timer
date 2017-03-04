@@ -43,4 +43,4 @@ b.style.background = color[i];
 
 function test() {
   document.getElementById("center-container").style.opacity = "1";
-  }
+}
