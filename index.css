@@ -9,28 +9,20 @@
 
 html, body {
   height: 100%;
+  width: 100%;
+  transition: background 3s;
 }
 
 body {
   background: black;
 }
 
-.dim {
-  height: 100%;
-  width: 100%;
-  background: rgba(0,0,0,0.5);
+#mobile {
+  display: none;
 }
-
-#background {
-  height: 100%;
-  width: 100%;
-  background: black;
-  transition: background 3s;
-}
-/* original color: #099b66 */
 
 #center-container {
-  height: 36.5%;
+  height: 280px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -44,6 +36,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
+  display: block;
 }
 
 h1 {
@@ -72,10 +65,16 @@ button {
   transform: translateX(-50%);
   border: none;
   border-radius: 5px;
+  font-weight: 200;
+  outline: 0;
 }
 
 button:active {
-  background: #9999FF;
+  background: #005c99;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 select {
@@ -84,13 +83,104 @@ select {
   background: #099bFF;
   font-size: 32px;
   color: white;
+  font-weight: 200;
+  outline: 0;
+}
+
+select:hover {
+  cursor: pointer;
 }
 
 .message {
-  width: 25vw;
+  width: 543px;
   height: 30px;
   border: none;
   border-radius: 5px;
   position: relative;
   bottom: 5px;
+}
+
+@media only screen and (max-width: 866px) {
+  h1 {
+    font-size: 80px;
+    font-weight: 200;
+  }
+
+  h3 {
+    font-size: 28px;
+    font-weight: 100;
+  }
+
+  select {
+    font-size: 28px;
+    font-weight: 200;
+  }
+
+  .message {
+    width: 478px;
+  }
+
+  button {
+    font-size: 28px;
+    font-weight: 200;
+    width: auto;
+    height: auto;
+    padding: 7px 14px;
+  }
+}
+
+@media only screen and (max-width: 754px) {
+  h1 {
+    font-size: 60px;
+    font-weight: 200;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  select {
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  .message {
+    width: 350px;
+  }
+
+  button {
+    font-size: 20px;
+    font-weight: 200;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #center-container {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h4 {
+    color: white;
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  h5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+  }
+
 }
