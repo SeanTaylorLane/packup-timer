@@ -8,9 +8,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="functions.js"></script>
  </head>
- <body onLoad="change()">
-   <div id="background">
-   <div class="dim">
+ <body onLoad="change()" id="background">
+   <div id="mobile">
+   <h4>Sorry, this site isn't for mobile yet!</h4>
+   <h5>(Request desktop version to proceed)</h5>
+ </div>
    <div id="center-container">
    <h1 id="test">When should I pack up?</h1>
    <div class="options-container">
@@ -38,12 +40,10 @@
      <button>Go!</button>
    </div>
  </div>
- </div>
- </div>
 <script>
 var b = document.getElementById("background");
 var p = document.getElementById("test");
-var color = ["blueViolet", "cornflowerBlue", "aquaMarine", "greenYellow", "orange", "orangeRed", "orange", "greenYellow", "aquaMarine", "cornflowerBlue", "blueViolet"];
+var color = ["#541a8a", "#3d5b91", "#4e9c82", "#6a9c1d", "#9c6500", "#9c2a00", "#9c6500", "#6a9c1d", "#4e9c82", "#3d5b91", "#541a8a"];
 var i = -1;
 var direction = 'true';
 //p.innerHTML = color[i] + "(" + i + ")";
