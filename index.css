@@ -21,6 +21,17 @@ body {
   display: none;
 }
 
+#front-content {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+#timer-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 10s;
+}
+
 #center-container {
   height: 330px;
   position: relative;
@@ -133,7 +144,7 @@ select:hover {
   }
 }
 
-@media only screen and (max-width: 757px) {
+@media only screen and (max-width: 754px) {
   h1 {
     font-size: 60px;
     font-weight: 200;

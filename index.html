@@ -8,13 +8,20 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="functions.js"></script>
  </head>
- <body onLoad="change()" id="background">
+ <body onLoad="changeBG()" id="background">
+
    <div id="mobile">
    <h4>Sorry, this site isn't for mobile yet!</h4>
    <h5>(Request desktop version to proceed)</h5>
  </div>
+
    <div id="center-container">
-   <h1 id="test">When should I pack up?</h1>
+     <div id="timer-content">
+       <h1 id="timer"></h1>
+     </div>
+
+     <div id="front-content">
+   <h1 id="header">When should I pack up?</h1>
    <div class="options-container">
      <h3>I am in <select name="period" class="dropdown">
           <option value="1">1st</option>
@@ -37,18 +44,22 @@
         </select> before the bell rings</h3>
 
      <h3>Message: <input type="text" placeholder="(Optional)" class="message"></h3>
-     <button>Go!</button>
+     <button onClick="screenSwap()">Go!</button>
    </div>
  </div>
+ </div>
+
 <script>
-var b = document.getElementById("background");
-var p = document.getElementById("test");
+var body = document.getElementById("background");
+var header = document.getElementById("header");
 var color = ["#541a8a", "#3d5b91", "#4e9c82", "#6a9c1d", "#9c6500", "#9c2a00", "#9c6500", "#6a9c1d", "#4e9c82", "#3d5b91", "#541a8a"];
 var i = -1;
 var direction = 'true';
 //p.innerHTML = color[i] + "(" + i + ")";
-setInterval(change, 2000);
-setTimeout(test, 500);
+setInterval(changeBG, 2000);
+setTimeout(fadeIn, 200);
+setInterval(getTime, 1000);
+
 </script>
 
  </body>
