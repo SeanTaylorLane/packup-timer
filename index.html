@@ -16,11 +16,12 @@
  </div>
 
    <div id="center-container">
-     <div id="timer-content">
+     <div id="timer-content" style="display:none">
+         <span id="exit" onClick="screenSwap()">&times;</span>
        <h1 id="timer"></h1>
      </div>
 
-     <div id="front-content">
+     <div id="front-content" style="display:block">
    <h1 id="header">When should I pack up?</h1>
    <div class="options-container">
      <h3>I am in <select name="period" class="dropdown">
@@ -58,7 +59,7 @@ var direction = 'true';
 //p.innerHTML = color[i] + "(" + i + ")";
 setInterval(changeBG, 2000);
 setTimeout(fadeIn, 200);
-setInterval(getTime, 1000);
+//setInterval(printTime, 1000);
 
 </script>
 
