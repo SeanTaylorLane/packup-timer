@@ -1,3 +1,7 @@
+# Ignore Sean's scratch directory
+# =========================
+scratch/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
