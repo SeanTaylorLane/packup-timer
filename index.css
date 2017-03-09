@@ -24,11 +24,15 @@ body {
 #front-content {
   opacity: 1;
   transition: opacity 0.2s;
+  width: 100%;
+  height: 100%;
 }
 
 #timer-content {
   opacity: 0;
   transition: opacity 0.2s;
+  width: 100%;
+  height: 100%;
 }
 
 #exit {
@@ -42,7 +46,13 @@ body {
   color: gainsboro;
 }
 
-#center-container {
+#timer-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#front-center {
   height: 330px;
   position: relative;
   top: 50%;
@@ -153,7 +163,7 @@ select:hover {
     padding: 5px 14px;
   }
 
-  #center-container {
+  #front-center {
     height: 302px;
   }
 }
@@ -186,13 +196,13 @@ select:hover {
     padding: 5px 10px;
   }
 
-  #center-container {
+  #front-center {
     height: 235px;
   }
 }
 
 @media only screen and (max-width: 570px) {
-  #center-container {
+  #front-center {
     display: none;
   }
 

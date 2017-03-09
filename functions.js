@@ -24,7 +24,7 @@ function printTime() {
 }
 
 function changeBG() {
-    
+
     if (i>9) {
         direction = false;
     }
@@ -45,40 +45,40 @@ body.style.background = color[i];
 }
 
 function fadeIn() {
-  document.getElementById("center-container").style.opacity = "1";
+  frontCenter.style.opacity = "1";
 }
 
 function screenSwap() { //function called on "Go!" button and "X" button
   var frontContent = document.getElementById("front-content"); //creates an easy-to-write variable for the front content
   var timerContent = document.getElementById("timer-content"); //creates an easy-to-write variable for the timer content
-  var frontDisplay = frontContent.style.display;
-  var timerDisplay = timerContent.style.display;
-  
+  var frontDisplay = frontContent.style.display; //variable for front-content dislay property
+  var timerDisplay = timerContent.style.display; // variable for timer-content display property
+
   function toTimer() {
       frontContent.style.display="none";
       timerContent.style.display="block";
       timerContent.style.opacity="1";
+      //centerContainer.style.height="auto";
   }
-  
+
   function toFront() {
       timerContent.style.display="none";
       frontContent.style.display="block";
       frontContent.style.opacity="1";
   }
-  
+
   if (timerDisplay=="none") {
      frontContent.style.opacity = "0"; //causes the front content to fade out, but remain on the page
      setTimeout(toTimer, 200); //after fadeout, sets front display to none and timer display to block
-     var getTimeInterval = setInterval(printTime, 1000); //prints the time
-  //setTimeout(function(){document.getElementById("timer").innerHTML = frontDisplay;}, 1200);
-  //setTimeout(function(){document.getElementById("timer").innerHTML = timerDisplay;}, 1200); //testing to see display property value (wont change to block???!!)
+     var getTimeInterval = setInterval(printTime, 1000); //prints the time NEED TO LEARN HOW THIS IS USED!!!
   //timerContent.style.opacity = "1"; //fades in the timer. not working for some reason :(
-  }
-  
-  if (frontDisplay=="none") {
+  } else if (frontDisplay=="none") {
      timerContent.style.opacity = "0";
      setTimeout(toFront, 200);
      clearInterval(getTimeInterval); //stops the printing of the time but isnt stopping it :%
+  } else {
+    frontCenter.style.background = "red";
+    timerCenter.style.background = "blue";
   }
-    
+
 }
