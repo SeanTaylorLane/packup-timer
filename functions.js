@@ -21,6 +21,10 @@ function printTime() {
 
     var timer = document.getElementById("timer");
     timer.innerHTML = output;
+
+    if (seconds<30) {
+      alert("timer is running");
+    }
 }
 
 function changeBG() {
@@ -68,14 +72,14 @@ function screenSwap() { //function called on "Go!" button and "X" button
   }
 
   if (timerDisplay=="none") {
+     printTimeInterval = setInterval(printTime, 1);
      frontContent.style.opacity = "0"; //causes the front content to fade out, but remain on the page
      setTimeout(toTimer, 200); //after fadeout, sets front display to none and timer display to block
-     var getTimeInterval = setInterval(printTime, 1000); //prints the time NEED TO LEARN HOW THIS IS USED!!!
   //timerContent.style.opacity = "1"; //fades in the timer. not working for some reason :(
   } else if (frontDisplay=="none") {
+     clearInterval(printTimeInterval);
      timerContent.style.opacity = "0";
      setTimeout(toFront, 200);
-     clearInterval(getTimeInterval); //stops the printing of the time but isnt stopping it :%
   } else {
     frontCenter.style.background = "red";
     timerCenter.style.background = "blue";

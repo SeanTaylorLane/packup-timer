@@ -22,7 +22,7 @@
      </div>
    </div>
 
-     <div id="front-content" style="display:block">
+     <div id="front-content" style="display:block" onLoad="clearInterval(printTimeInterval)">
        <div id="front-center">
    <h1 id="header">When should I pack up?</h1>
    <div class="options-container">
@@ -63,6 +63,7 @@ setInterval(changeBG, 2000);
 setTimeout(fadeIn, 200);
 //setInterval(printTime, 1000);
 
+var printTimeInterval;
 var frontCenter = document.getElementById("front-center");
 
 </script>
