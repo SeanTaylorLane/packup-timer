@@ -40,10 +40,12 @@ body {
   clear: left;
   font-size: 50px;
   color: white;
+    transition: color 0.35s ease;
+    margin-right: 20px;
 }
 
 #exit:hover {
-  color: gainsboro;
+  color: #989898;
 }
 
 #timer-center {
@@ -205,6 +207,9 @@ select:hover {
   #front-center {
     display: none;
   }
+    #timer, #exit {
+        display: none;
+    }
 
   #mobile {
     display: block;

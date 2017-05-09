@@ -22,9 +22,9 @@ function printTime() {
     var timer = document.getElementById("timer");
     timer.innerHTML = output;
 
-    if (seconds<30) {
-      alert("timer is running");
-    }
+//    if (seconds<30) {
+//      alert("timer is running");
+//    }
 }
 
 function changeBG() {
