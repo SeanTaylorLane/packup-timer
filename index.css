@@ -45,7 +45,8 @@ body {
 }
 
 #exit:hover {
-  color: #989898;
+  color: #d4d4d4;
+  cursor: pointer;
 }
 
 #timer-center {
@@ -91,8 +92,8 @@ button {
   color: white;
   font-size: 32px;
   background: #099bFF;
-  height: 50px;
-  width: 70px;
+/*  height: 50px;*/
+/*  width: 70px;*/
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -100,6 +101,8 @@ button {
   border-radius: 5px;
   font-weight: 200;
   outline: 0;
+  padding: 5px 10px;
+  margin-top: 10px;
 }
 
 button:active {
@@ -107,10 +110,6 @@ button:active {
 }
 
 button:hover {
-  cursor: pointer;
-}
-
-#exit:hover {
   cursor: pointer;
 }
 
@@ -128,6 +127,10 @@ select:hover {
   cursor: pointer;
 }
 
+option {
+  font-weight: 200;
+}
+
 .message {
   width: 543px;
   height: 30px;
@@ -135,6 +138,16 @@ select:hover {
   border-radius: 5px;
   position: relative;
   bottom: 5px;
+}
+
+h1.timer {
+/*  font-size: 70px;*/
+  font-size: 4vw;
+}
+
+h3.timer {
+  font-size: 2vw;
+  text-align: center;
 }
 
 @media only screen and (max-width: 866px) {
@@ -207,7 +220,7 @@ select:hover {
   #front-center {
     display: none;
   }
-    #timer, #exit {
+    #timer-center, #exit {
         display: none;
     }
 

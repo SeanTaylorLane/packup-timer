@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Packup Clock</title>
+   <title>Pack Up Timer</title>
    <link href="index.css" rel="stylesheet" type="text/css">
    <link href="favicon.ico" rel="icon" type="image/x-icon">
    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
    <script src="functions.js"></script>
  </head>
+    
  <body onLoad="changeBG()" id="background">
 
    <div id="mobile">
@@ -18,14 +23,18 @@
      <div id="timer-content" style="display:none">
        <span id="exit" onClick="screenSwap()">&times;</span>
        <div id="timer-center">
-       <h1 id="timer"></h1>
+        <!--       <h1 id="timer"></h1>-->
+        <h1 class="timer" id="timer-h1"></h1>
+        <h3 class="timer" id="timer-h3"></h3>
+        <h1 class="timer" id="timer-packup" style="display: none;"></h1>
      </div>
    </div>
 
-     <div id="front-content" style="display:block" onLoad="clearInterval(printTimeInterval)">
+     <div id="front-content" style="display:block">
        <div id="front-center">
    <h1 id="header">When should I pack up?</h1>
    <div class="options-container">
+<!--
      <h3>I am in <select name="period" class="dropdown">
           <option value="1">1st</option>
           <option value="2">2nd</option>
@@ -37,16 +46,16 @@
           <option value="8">8th</option>
           <option value="9">9th</option>
         </select> period</h3>
-
-     <h3>I want to be notified <select name="notify" class="dropdown">
-          <option value="1min">1 minute</option>
-          <option value="2min">2 minutes</option>
-          <option value="2min">3 minutes</option>
-          <option value="2min">4 minutes</option>
-          <option value="2min">5 minutes</option>
+-->
+     <h3>I want to be notified <select name="notify" class="dropdown" id="userTimeSelect">
+          <option value="1" selected="selected">1 minute</option>
+          <option value="2">2 minutes</option>
+          <option value="3">3 minutes</option>
+          <option value="4">4 minutes</option>
+          <option value="5">5 minutes</option>
         </select> before the bell rings</h3>
 
-     <h3>Message: <input type="text" placeholder="(Optional)" class="message"></h3>
+     <h3>Message: <input type="text" placeholder="(Optional)" class="message" name="userMessage" id="userMessageInput"></h3>
      <button onClick="screenSwap()">Go!</button>
    </div>
  </div>
@@ -56,16 +65,22 @@
 var body = document.getElementById("background");
 var header = document.getElementById("header");
 var color = ["#541a8a", "#3d5b91", "#4e9c82", "#6a9c1d", "#9c6500", "#9c2a00", "#9c6500", "#6a9c1d", "#4e9c82", "#3d5b91", "#541a8a"];
-var i = -1;
-var direction = 'true';
-//p.innerHTML = color[i] + "(" + i + ")";
+var colorInterval = -1;
+var direction = true;
 setInterval(changeBG, 2000);
 setTimeout(fadeIn, 200);
-//setInterval(printTime, 1000);
 
-var printTimeInterval;
 var frontCenter = document.getElementById("front-center");
 
+var userMessage;
+var userTime;
+var d;
+
+var period;
+var secondsUntilEnd;
+var secondsUntilAlert;
+var packupTimer;
+var alarmTimer;
 </script>
 
  </body>
